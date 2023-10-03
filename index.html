@@ -1,0 +1,1756 @@
+<!DOCTYPE HTML>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <link rel="icon" href="https://static.wikia.nocookie.net/ea54470f-1eeb-44a0-b6a8-3f4434885bcc/scale-to-width/755">
+        <style>
+        
+            * {
+                font-family: sans-serif;
+                -webkit-user-select: none;
+                -moz-user-select: none;
+                -ms-user-select: none;
+                user-select: none;
+            }
+            
+            p {
+                margin: 0;
+                padding: 0;
+            }
+            
+            body {
+                margin: 0;
+                padding: 0;
+                height: 100vh;
+                width: 100vw;
+                background-color: #333333;
+            }
+            
+            header {
+                position: sticky;
+                width: 100vw;
+                height: 15vh;
+                background-color: #222222;
+                display: flex;
+                justify-content: flex-start;
+                align-items: center;
+                font-weight: 600;
+                font-size: 300%;
+                border-bottom: 5px solid #DBDBDB;
+            }
+            
+            #TDS_Logo {
+                width: 15vw;
+                height: auto;
+                margin-left: 1vw;
+            }
+            
+            #TDS_Title {
+                position: absolute;
+                left: 40%;
+                color: #DBDBDB;
+                text-shadow: 4px 4px 8px rgba(11, 160, 241, 1);
+            }
+            
+            #Main {
+                display: flex;
+                justify-content: center;
+            }
+            
+            nav {
+                height: calc(80vh - 10px);
+                width: 15vw;
+                background-color: #333333;
+            }
+            
+            #Action_main_div {
+                width: 100%;
+                height: 100%;
+                color: #DBDBDB;
+                display: flex;
+                flex-direction: column;
+            }
+            
+            .Action {
+                font-size: 125%;
+                margin-top: 10px;
+                margin-left: 1vw;
+                text-shadow: 4px 4px 8px rgba(252, 98, 98, 1);
+                cursor: pointer;
+                color: #DBDBDB;
+            }
+            
+            .Action:hover {
+                text-shadow: 4px 4px 8px rgba(255, 161, 161, 1);
+            }
+            
+            #Action2_div {
+                display: none;
+                width: 100%;
+                height: 100%;
+                flex-wrap: wrap;
+                justify-content: space-around;
+            }
+            
+            #Action2_div_main {
+                height: 60%;
+                width: 100%;
+            }
+            
+            #Action2_div1, #Action2_div2, #Action2_div3, #Action2_div4, #Action2_div5
+                        {
+                height: 20%;
+                width: 100%;
+                display: flex;
+                justify-content: space-around;
+                align-items: center;
+            }
+            
+            #Action3_div, #Action4_div{
+                display: none;
+                width: 100%;
+                height: 100%;
+                flex-wrap: wrap;
+                justify-content: space-around;
+            }
+            
+            #Action3_div_main, #Action4_div_main {
+                height: 80%;
+                width: 100%;
+            }
+            
+            #Action3_title, #Action4_title {
+                display: flex;
+                justify-content: center;
+                margin-top: 1vw;
+                font-size: 200%;
+                text-shadow: 4px 4px 8px rgba(252, 98, 98, 1);
+                margin-bottom: 20px;
+                color: white;
+            }
+            
+            .Action3 {
+                margin-left: 0;
+                padding-left: 1vw;
+            }
+            
+            .Action_4 {
+                font-size: 125%;
+                margin-top: 10px;
+                margin-left: 1vw;
+                text-shadow: 4px 4px 8px rgba(252, 98, 98, 1);
+                color: #DBDBDB;
+            }
+            
+            .Farm_input {
+                height: 50%;
+                display: inline-block;
+                text-align: center;
+                
+            }
+            
+            .Farm_input::placeholder {
+                text-align: center;
+            }
+            
+            #setFarmsLevels {
+                border: 3px solid #222222;
+                width: 80%;
+                height: 10%;
+            }
+            
+            #setFarmsLevels:hover {
+                transform: rotate(5deg);
+            }
+            
+            #Action_title {
+                display: flex;
+                justify-content: center;
+                margin-top: 1vw;
+                font-size: 200%;
+                text-shadow: 4px 4px 8px rgba(252, 98, 98, 1);
+                margin-bottom: 20px;
+            }
+            
+            article {
+                height: calc(80vh - 10px);
+                width: 15vw;
+                background-color: #333333;
+            }
+            
+            #CPW_div {
+                height: 20%;
+                width: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+            
+            #CPW_icon {
+                height: 10vh;
+                width: 10vh;
+                margin-right: 1vh;
+            }
+            
+            #PW_text1 {
+                color: #DBDBDB;
+                font-size: 200%;
+                font-weight: 600;
+                text-shadow: 4px 4px 8px rgba(112, 255, 117, 1);
+            }
+            
+            #PW_text2 {
+                height: 10%;
+                width: 100%;
+                display: flex;
+                align-items: flex-start;
+                justify-content: center;
+                color: #DBDBDB;
+                font-size: 300%;
+                font-weight: 600;
+                text-shadow: 4px 4px 8px rgba(112, 255, 117, 1);
+            }
+            
+            footer {
+                height: 5vh;
+                width: 100vw;
+                background-color: #222222;
+                border-top: 5px solid #DBDBDB;
+                color: #DBDBDB;
+                display: flex;
+                align-items: center;
+            }
+            
+            .return_btn {
+                border: 3px solid #222222;
+                width: 80%;
+                height: 10%;
+            }
+            
+            button {
+              cursor: pointer;
+              position: relative;
+              background: #444;
+              color: #fff;
+              text-decoration: none;
+              text-transform: uppercase;
+              border: none;
+              letter-spacing: 0.1rem;
+              font-size: 1rem;
+              transition: 0.2s;
+            }
+            button:hover {
+              letter-spacing: 0.2rem;
+              padding: 0.1rem 0.1rem;
+              background: var(--clr);
+              color: var(--clr);
+              box-shadow: 0 0 35px var(--clr);
+              animation: box 3s infinite;
+              transform: rotate(5deg);
+            }
+            button::before {
+              content: "";
+              position: absolute;
+              inset: 2px;
+              background: #272822;
+            }
+            button span {
+              position: relative;
+              z-index: 1;
+            }
+            button i {
+              position: absolute;
+              inset: 0;
+              display: block;
+            }
+            button i::before {
+              content: "";
+              position: absolute;
+              width: 10px;
+              height: 2px;
+              left: 80%;
+              top: -2px;
+              border: 2px solid var(--clr);
+              background: #272822;
+              transition: 0.2s;
+            }
+            button:hover i::before {
+              width: 15px;
+              left: 20%;
+              animation: move 3s infinite;
+            }
+            button i::after {
+              content: "";
+              position: absolute;
+              width: 10px;
+              height: 2px;
+              left: 20%;
+              bottom: -2px;
+              border: 2px solid var(--clr);
+              background: #272822;
+              transition: 0.2s;
+            }
+            button:hover i::after {
+              width: 15px;
+              left: 80%;
+              animation: move 3s infinite;
+            }
+            @keyframes move {
+              0% {
+                transform: translateX(0);
+              }
+              50% {
+                transform: translateX(5px);
+              }
+              100% {
+                transform: translateX(0);
+              }
+            }
+            @keyframes box {
+              0% {
+                box-shadow: #27272c;
+              }
+              50% {
+                box-shadow: 0 0 25px var(--clr);
+              }
+              100% {
+                box-shadow: #27272c;
+              }
+            }
+            
+            #footer_title {
+                margin-left: 1vw;
+            }
+            
+            section {
+                height: calc(80vh - 10px);
+                width: calc(70vw - 4px);
+                background-color: #888888;
+                border-right: 2px solid #DBDBDB;
+                border-left: 2px solid #DBDBDB;
+            }
+            
+            #Farms_top {
+                width: 100%;
+                height: 50%;
+                display: flex;
+                justify-content: space-around;
+                align-items: center;
+            }
+            
+            #Farms_bottom {
+                width: 100%;
+                height: 50%;
+                display: flex;
+                justify-content: space-around;
+                align-items: center;
+            }
+            
+            .Farm_box{
+                width: 20%;
+                border: solid black 2px;
+                display: flex;
+                flex-wrap: wrap;
+            }
+            
+            .Farm {
+                position: relative;
+                height: 80%;
+                width: 100%;
+                background-color: #F1F1F1;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+            
+            .Upgrade_box {
+                height: 20%;
+                width: 100%;
+                background-color: darkred;
+                display: flex;
+                flex-wrap: wrap;
+            }
+            
+            .uprage {
+                height: calc(100% - 2px);
+                width: calc(80% - 2px);
+                border-right: 2px solid black;
+                background-color: #9fff91;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                font-size: 175%;
+                cursor: pointer;
+                border-top: solid black 2px;
+            }
+            
+            .sell{
+                height: calc(100% - 2px);
+                width: 20%;
+                background-color: red;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                font-weight: 900;
+                font-size: 200%;
+                cursor: pointer;
+                border-top: solid black 2px;
+            }
+            
+            .lvl {
+                position: absolute;
+                top: 0;
+                left: 0;
+                font-weight: 900;
+                font-size: 200%;
+                margin-top: 10px;
+                margin-left: 10px;
+                display: none;
+            }
+            
+            .Farm_img {
+                height: 100%;
+                display: none;
+            }
+            
+        </style>
+    </head>
+    <body>
+        <header>
+            <img src="https://static.wikia.nocookie.net/tower-defense-sim/images/9/99/NewLogo.png" alt="TDS_Logo_:3" id="TDS_Logo">
+            <p id="TDS_Title">TDS Farms</p>
+        </header>
+        <div id="Main">
+            <nav>
+                <div id="Action_main_div">
+                    <p id="Action_title">Actions</p>
+                    <div id="Actions">
+                        <p id="Action_1" class="Action">Sell all Farms</p>
+                        <p id="Action_2" class="Action">Set Farms' levels</p>
+                        <p id="Action_3" class="Action">Change Skin</p>
+                        <p id="Action_4" class="Action">View Best Value</p>
+                    </div>
+                </div>
+                <div id="Action2_div">
+                    <div id="Action2_div_main">
+                        <div id="Action2_div1">
+                            <input type="text" placeholder="F1" id="Farm1_input" class="Farm_input" maxlength="1" onkeyup="if(this.value.length === this.maxLength) document.getElementById('Farm2_input').focus();">
+                            <input type="text" placeholder="F2" id="Farm2_input" class="Farm_input" maxlength="1" onkeyup="if(this.value.length === this.maxLength) document.getElementById('Farm3_input').focus();">
+                        </div>
+                        <div id="Action2_div2">
+                            <input type="text" placeholder="F3" id="Farm3_input" class="Farm_input" maxlength="1" onkeyup="if(this.value.length === this.maxLength) document.getElementById('Farm4_input').focus();">
+                            <input type="text" placeholder="F4" id="Farm4_input" class="Farm_input" maxlength="1" onkeyup="if(this.value.length === this.maxLength) document.getElementById('Farm5_input').focus();">
+                        </div>
+                        <div id="Action2_div3">
+                            <input type="text" placeholder="F5" id="Farm5_input" class="Farm_input" maxlength="1" onkeyup="if(this.value.length === this.maxLength) document.getElementById('Farm6_input').focus();">
+                            <input type="text" placeholder="F6" id="Farm6_input" class="Farm_input" maxlength="1" onkeyup="if(this.value.length === this.maxLength) document.getElementById('Farm7_input').focus();">
+                        </div>
+                        <div id="Action2_div4">
+                            <input type="text" placeholder="F7" id="Farm7_input" class="Farm_input" maxlength="1" onkeyup="if(this.value.length === this.maxLength) document.getElementById('Farm8_input').focus();">
+                            <input type="text" placeholder="F8" id="Farm8_input" class="Farm_input" maxlength="1">
+                        </div>
+                        <div id="Action2_div5">
+                            <input type="text" placeholder="ALL" id="FarmAll_input" class="Farm_input" maxlength="1">
+                        </div>
+                    </div>
+                    <button style="--clr:#A1FF59" id="setFarmsLevels"><span>Set</span><i></i></button>
+                    <button style="--clr:#FC6262" class="return_btn"><span>Return</span><i></i></button>
+                </div>
+                <div id="Action3_div">
+                    <div id="Action3_div_main">
+                        <p id="Action3_title">Skins</p>
+                        <div id="Actions_3">
+                            <p id="Action3_1" class="Action Action3">Default</p>
+                            <p id="Action3_2" class="Action Action3">Arcade</p>
+                            <p id="Action3_3" class="Action Action3">Xmas</p>
+                            <p id="Action3_4" class="Action Action3">Tycoon</p>
+                            <p id="Action3_5" class="Action Action3">Graveyard</p>
+                            <p id="Action3_6" class="Action Action3">Present</p>
+                            <p id="Action3_7" class="Action Action3">Ducky</p>
+                            <p id="Action3_8" class="Action Action3">Crypto</p>
+                        </div>
+                    </div>
+                    <button style="--clr:#FC6262" class="return_btn"><span>Return</span><i></i></button>
+                </div>
+                <div id="Action4_div">
+                    <div id="Action4_div_main">
+                        <p id="Action4_title">Best Value</p>
+                        <div id="Actions_4">
+                            <p id="Action4_1" class="Action_4">TIP1</p>
+                            <p id="Action4_2" class="Action_4">TIP2</p>
+                            <p id="Action4_3" class="Action_4">TIP3</p>
+                        </div>
+                    </div>
+                    <button style="--clr:#FC6262" class="return_btn"><span>Return</span><i></i></button>
+                </div>
+            </nav>
+            
+            <section>
+                <div id="Farms_top">
+                    <div class="Farm_box">
+                        <div id="Farm1" class="Farm">
+                            <p class="lvl" id="Farm1_lvl">
+                                0
+                            </p>
+                            <img src="https://static.wikia.nocookie.net/tower-defense-sim/images/1/16/NewFarm0.png" alt="FarmIMG" id="Farm1_img" class="Farm_img">
+                        </div>
+                        <div class="Upgrade_box">
+                            <div class="uprage" id="upgrade_1">
+                                 Place
+                            </div>
+                            <div class="sell" id="sell_1">
+                                X
+                            </div>
+                        </div>
+                    </div>
+                    <div class="Farm_box">
+                        <div id="Farm2" class="Farm">
+                            <p class="lvl" id="Farm2_lvl">
+                                0
+                            </p>
+                            <img src="https://static.wikia.nocookie.net/tower-defense-sim/images/1/16/NewFarm0.png" alt="FarmIMG" id="Farm2_img" class="Farm_img">
+                        </div>
+                        <div class="Upgrade_box">
+                            <div class="uprage" id="upgrade_2">
+                                 Place
+                            </div>
+                            <div class="sell" id="sell_2">
+                                X
+                            </div>
+                        </div>
+                    </div>
+                    <div class="Farm_box">
+                        <div id="Farm3" class="Farm">
+                            <p class="lvl" id="Farm3_lvl">
+                                0
+                            </p>
+                            <img src="https://static.wikia.nocookie.net/tower-defense-sim/images/1/16/NewFarm0.png" alt="FarmIMG" id="Farm3_img" class="Farm_img">
+                        </div>
+                        <div class="Upgrade_box">
+                            <div class="uprage" id="upgrade_3">
+                                 Place
+                            </div>
+                            <div class="sell" id="sell_3">
+                                X
+                            </div>
+                        </div>
+                    </div>
+                    <div class="Farm_box">
+                        <div id="Farm4" class="Farm">
+                            <p class="lvl" id="Farm4_lvl">
+                                0
+                            </p>
+                            <img src="https://static.wikia.nocookie.net/tower-defense-sim/images/1/16/NewFarm0.png" alt="FarmIMG" id="Farm4_img" class="Farm_img">
+                        </div>
+                        <div class="Upgrade_box">
+                            <div class="uprage" id="upgrade_4">
+                                 Place
+                            </div>
+                            <div class="sell" id="sell_4">
+                                X
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="Farms_bottom">
+                    <div class="Farm_box">
+                        <div id="Farm5" class="Farm">
+                            <p class="lvl" id="Farm5_lvl">
+                                0
+                            </p>
+                            <img src="https://static.wikia.nocookie.net/tower-defense-sim/images/1/16/NewFarm0.png" alt="FarmIMG" id="Farm5_img" class="Farm_img">
+                        </div>
+                        <div class="Upgrade_box">
+                            <div class="uprage" id="upgrade_5">
+                                 Place
+                            </div>
+                            <div class="sell" id="sell_5">
+                                X
+                            </div>
+                        </div>
+                    </div>
+                    <div class="Farm_box">
+                        <div id="Farm6" class="Farm">
+                            <p class="lvl" id="Farm6_lvl">
+                                0
+                            </p>
+                            <img src="https://static.wikia.nocookie.net/tower-defense-sim/images/1/16/NewFarm0.png" alt="FarmIMG" id="Farm6_img" class="Farm_img">
+                        </div>
+                        <div class="Upgrade_box">
+                            <div class="uprage" id="upgrade_6">
+                                 Place
+                            </div>
+                            <div class="sell" id="sell_6">
+                                X
+                            </div>
+                        </div>
+                    </div>
+                    <div class="Farm_box">
+                        <div id="Farm7" class="Farm">
+                            <p class="lvl" id="Farm7_lvl">
+                                0
+                            </p>
+                            <img src="https://static.wikia.nocookie.net/tower-defense-sim/images/1/16/NewFarm0.png" alt="FarmIMG" id="Farm7_img" class="Farm_img">
+                        </div>
+                        <div class="Upgrade_box">
+                            <div class="uprage" id="upgrade_7">
+                                 Place
+                            </div>
+                            <div class="sell" id="sell_7">
+                                X
+                            </div>
+                        </div>
+                    </div>
+                    <div class="Farm_box">
+                        <div id="Farm8" class="Farm">
+                            <p class="lvl" id="Farm8_lvl">
+                                0
+                            </p>
+                            <img src="https://static.wikia.nocookie.net/tower-defense-sim/images/1/16/NewFarm0.png" alt="FarmIMG" id="Farm8_img" class="Farm_img">
+                        </div>
+                        <div class="Upgrade_box">
+                            <div class="uprage" id="upgrade_8">
+                                 Place
+                            </div>
+                            <div class="sell" id="sell_8">
+                                X
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <article>
+                <div id="CPW_div">
+                    <img src="https://static.wikia.nocookie.net/tower-defense-sim/images/4/46/Cash_Icon.png" alt="$" id="CPW_icon">
+                    <p id="PW_text1">Per Wave</p>
+                </div>
+                <p id="PW_text2">
+                    0
+                <p>
+            </article>
+        </div>
+        <footer>
+            <p id="footer_title">
+                Made by: Dudq
+            </p>
+        </footer>
+    </body>
+    <script>
+        
+            let l0_Default_SRC = "https://static.wikia.nocookie.net/tower-defense-sim/images/1/16/NewFarm0.png";
+            let l1_Default_SRC = "https://static.wikia.nocookie.net/tower-defense-sim/images/e/ec/NDFarm1.png";
+            let l2_Default_SRC = "https://static.wikia.nocookie.net/tower-defense-sim/images/9/90/NDFarm2.png";
+            let l3_Default_SRC = "https://static.wikia.nocookie.net/tower-defense-sim/images/4/45/NDFarm3.png";
+            let l4_Default_SRC = "https://static.wikia.nocookie.net/tower-defense-sim/images/b/b8/NDFarm4.png";
+            let l5_Default_SRC = "https://static.wikia.nocookie.net/tower-defense-sim/images/9/9c/NDFarm5.png";
+            
+            let l0_Arcade_SRC = "https://static.wikia.nocookie.net/tower-defense-sim/images/6/65/AFarm0.png";
+            let l1_Arcade_SRC = "https://static.wikia.nocookie.net/tower-defense-sim/images/7/70/AFarm1.png";
+            let l2_Arcade_SRC = "https://static.wikia.nocookie.net/tower-defense-sim/images/b/bd/AFarm2.png";
+            let l3_Arcade_SRC = "https://static.wikia.nocookie.net/tower-defense-sim/images/2/29/AFarm3.png";
+            let l4_Arcade_SRC = "https://static.wikia.nocookie.net/tower-defense-sim/images/1/12/AFarm4.png";
+            let l5_Arcade_SRC = "https://static.wikia.nocookie.net/tower-defense-sim/images/3/3f/AFarm5.png";
+        
+            let l0_Xmax_SRC = "https://static.wikia.nocookie.net/tower-defense-sim/images/9/90/XFarm0.png";
+            let l1_Xmax_SRC = "https://static.wikia.nocookie.net/tower-defense-sim/images/c/c4/XFarm1.png";
+            let l2_Xmax_SRC = "https://static.wikia.nocookie.net/tower-defense-sim/images/4/41/XFarm2.png";
+            let l3_Xmax_SRC = "https://static.wikia.nocookie.net/tower-defense-sim/images/5/53/XFarm3.png";
+            let l4_Xmax_SRC = "https://static.wikia.nocookie.net/tower-defense-sim/images/c/cb/XFarm4.png";
+            let l5_Xmax_SRC = "https://static.wikia.nocookie.net/tower-defense-sim/images/f/fd/XFarm5.png";
+        
+            let l0_Tycoon_SRC = "https://static.wikia.nocookie.net/tower-defense-sim/images/0/0f/TFarm0.png";
+            let l1_Tycoon_SRC = "https://static.wikia.nocookie.net/tower-defense-sim/images/3/3c/TFarm1.png";
+            let l2_Tycoon_SRC = "https://static.wikia.nocookie.net/tower-defense-sim/images/b/b0/TFarm2.png";
+            let l3_Tycoon_SRC = "https://static.wikia.nocookie.net/tower-defense-sim/images/0/05/TFarm3.png";
+            let l4_Tycoon_SRC = "https://static.wikia.nocookie.net/tower-defense-sim/images/5/52/TFarm4.png";
+            let l5_Tycoon_SRC = "https://static.wikia.nocookie.net/tower-defense-sim/images/3/37/TFarm5.png";
+            
+            let l0_Graveyard_SRC = "https://static.wikia.nocookie.net/tower-defense-sim/images/e/ea/GFarm0.png";
+            let l1_Graveyard_SRC = "https://static.wikia.nocookie.net/tower-defense-sim/images/1/1f/GFarm1.png";
+            let l2_Graveyard_SRC = "https://static.wikia.nocookie.net/tower-defense-sim/images/1/19/GFarm2.png";
+            let l3_Graveyard_SRC = "https://static.wikia.nocookie.net/tower-defense-sim/images/d/d5/GFarm3.png";
+            let l4_Graveyard_SRC = "https://static.wikia.nocookie.net/tower-defense-sim/images/c/c4/GFarm4.png";
+            let l5_Graveyard_SRC = "https://static.wikia.nocookie.net/tower-defense-sim/images/2/2c/GFarm5.png";
+        
+            let l0_Present_SRC = "https://static.wikia.nocookie.net/tower-defense-sim/images/a/a4/PresentFarm.png";
+            let l1_Present_SRC = "https://static.wikia.nocookie.net/tower-defense-sim/images/8/8e/PresentFarm1.png";
+            let l2_Present_SRC = "https://static.wikia.nocookie.net/tower-defense-sim/images/3/3b/PresentFarm2.png";
+            let l3_Present_SRC = "https://static.wikia.nocookie.net/tower-defense-sim/images/7/75/PresentFarm3.png";
+            let l4_Present_SRC = "https://static.wikia.nocookie.net/tower-defense-sim/images/8/8c/PresentFarm4.png";
+            let l5_Present_SRC = "https://static.wikia.nocookie.net/tower-defense-sim/images/5/5a/PresentFarm5.png";
+        
+            let l0_Ducky_SRC = "https://static.wikia.nocookie.net/tower-defense-sim/images/a/ab/DuckyFarm0.png";
+            let l1_Ducky_SRC = "https://static.wikia.nocookie.net/tower-defense-sim/images/9/91/DuckFarm.png";
+            let l2_Ducky_SRC = "https://static.wikia.nocookie.net/tower-defense-sim/images/0/04/DuckyFarm2.png";
+            let l3_Ducky_SRC = "https://static.wikia.nocookie.net/tower-defense-sim/images/b/ba/DuckyFarm3.png";
+            let l4_Ducky_SRC = "https://static.wikia.nocookie.net/tower-defense-sim/images/8/81/DuckyFarm4.png";
+            let l5_Ducky_SRC = "https://static.wikia.nocookie.net/tower-defense-sim/images/f/ff/DuckyFarm5.png";
+        
+            let l0_Crypto_SRC = "https://static.wikia.nocookie.net/tower-defense-sim/images/6/62/CryptoFarm0.png";
+            let l1_Crypto_SRC = "https://static.wikia.nocookie.net/tower-defense-sim/images/1/1f/CryptoFarm1.png";
+            let l2_Crypto_SRC = "https://static.wikia.nocookie.net/tower-defense-sim/images/1/17/CryptoFarm2.png";
+            let l3_Crypto_SRC = "https://static.wikia.nocookie.net/tower-defense-sim/images/e/eb/CryptoFarm3.png";
+            let l4_Crypto_SRC = "https://static.wikia.nocookie.net/tower-defense-sim/images/0/02/CryptoFarm4.png";
+            let l5_Crypto_SRC = "https://static.wikia.nocookie.net/tower-defense-sim/images/7/7c/CryptoFarm5.png";
+        
+            let Chosen_l0 = l0_Default_SRC;
+            let Chosen_l1 = l1_Default_SRC;
+            let Chosen_l2 = l2_Default_SRC;
+            let Chosen_l3 = l3_Default_SRC;
+            let Chosen_l4 = l4_Default_SRC;
+            let Chosen_l5 = l5_Default_SRC;
+            
+            let CPW = 0;
+        
+            let Farm_1_lvl = -1;
+            let Farm_2_lvl = -1;
+            let Farm_3_lvl = -1;
+            let Farm_4_lvl = -1;
+            let Farm_5_lvl = -1;
+            let Farm_6_lvl = -1;
+            let Farm_7_lvl = -1;
+            let Farm_8_lvl = -1;
+            
+            //Testing
+        
+            function FarmsAmmount(x){
+                let count = 0;
+                if(x == Farm_1_lvl){count++}
+                if(x == Farm_2_lvl){count++}
+                if(x == Farm_3_lvl){count++}
+                if(x == Farm_4_lvl){count++}
+                if(x == Farm_5_lvl){count++}
+                if(x == Farm_6_lvl){count++}
+                if(x == Farm_7_lvl){count++}
+                if(x == Farm_8_lvl){count++}
+                
+                return count;
+            }
+        
+            let tip1 = "X";
+            let tip2 = "X";
+            let tip3 = "X";
+        
+            function updateBestValue(){
+                    
+                    tip1 = "X";
+                    tip2 = "X";
+                    tip3 = "X";
+                    
+                    if(FarmsAmmount(3) >= 1){
+                        tip3 = tip2;
+                        tip2 = tip1;
+                        tip1 = `[1] 3➡4`;
+                    }
+                    
+                    if(FarmsAmmount(4) >= 1){
+                        tip3 = tip2;
+                        tip2 = tip1;
+                        tip1 = `[1] 4➡5`;
+                    }
+                    
+                    if(FarmsAmmount(-1) >= 1){
+                        tip3 = tip2;
+                        tip2 = tip1;
+                        tip1 = `[1] X➡0`;
+                    }
+                    
+                    if(FarmsAmmount(2) >= 1){
+                        tip3 = tip2;
+                        tip2 = tip1;
+                        tip1 = `[1] 2➡3`;
+                    }
+                    
+                    if(FarmsAmmount(0) >= 1){
+                        tip3 = tip2;
+                        tip2 = tip1;
+                        tip1 = `[1] 0➡1`;
+                    }
+                    
+                    if(FarmsAmmount(1) == 1){
+                        tip3 = tip2;
+                        tip2 = tip1;
+                        tip1 = `[1] 1➡2`;
+                    }
+                    
+                    if(FarmsAmmount(1) == 1 && FarmsAmmount(2) >= 2){
+                        tip3 = tip2;
+                        tip2 = tip1;
+                        tip1 = `[1] 2➡3`;
+                    }
+                    
+                    if(FarmsAmmount(1) >= 2){
+                        tip3 = tip2;
+                        tip2 = tip1;
+                        tip1 = `[${FarmsAmmount(1)}] 1➡2`;
+                    }           
+                
+                Action4_1.innerHTML = tip1;
+                Action4_2.innerHTML = tip2;
+                Action4_3.innerHTML = tip3;
+            }
+            //
+            
+            updateBestValue();
+        
+            let Farm_box_size = 0;  
+            function updateFarmSize() {
+                for (let i = 0; i < document.getElementsByClassName("Farm_box").length; i++) {
+                    Farm_box_size = document.querySelector(".Farm_box").getBoundingClientRect().width;
+                    document.getElementsByClassName("Farm_box")[i].style.height = Farm_box_size + "px";
+                }
+            }
+        
+            let Farm_input_size = 0;
+            function updateFarmInputSize() {
+                for (let i = 0; i < document.getElementsByClassName("Farm_input").length; i++){
+                    Farm_input_size = document.querySelector(".Farm_input").getBoundingClientRect().height;
+                    document.getElementsByClassName("Farm_input")[i].style.width = Farm_input_size + "px";
+                }
+            }    
+            
+            
+            window.addEventListener('load', function(){
+                updateFarmSize();
+                updateFarmInputSize();
+            })
+            window.addEventListener('resize', function(){
+                updateFarmSize();
+                updateFarmInputSize();
+            })
+            
+        
+            function returnCPW(x){
+                switch(x){
+                    case -1:
+                        return 0;
+                    case 0:
+                        return 50;
+                    case 1:
+                        return 100;
+                    case 2:
+                        return 250;
+                    case 3:
+                        return 500;
+                    case 4:
+                        return 750;
+                    case 5:
+                        return 1500;
+                }
+            }
+            function updateCPW() {
+                CPW =   returnCPW(Farm_1_lvl) +
+                        returnCPW(Farm_2_lvl) +
+                        returnCPW(Farm_3_lvl) +
+                        returnCPW(Farm_4_lvl) +
+                        returnCPW(Farm_5_lvl) +
+                        returnCPW(Farm_6_lvl) +
+                        returnCPW(Farm_7_lvl) +
+                        returnCPW(Farm_8_lvl);
+                PW_text2.innerHTML = CPW;
+            }
+
+            
+
+            for (let i = 0; i < document.getElementsByClassName("Action").length; i++) {
+              document.getElementsByClassName("Action")[i].addEventListener('mousedown', function() {
+                this.style.color = "#222222";
+              });
+            }
+            for (let i = 0; i < document.getElementsByClassName("return_btn").length; i++) {
+                document.getElementsByClassName("return_btn")[i].addEventListener('mousedown', function() {
+                    this.querySelector('span').style.color = "white";
+                });
+                
+                document.getElementsByClassName("return_btn")[i].addEventListener('click', function() {
+                    Action_main_div.style.display = "flex";
+                    Action2_div.style.display = "none";
+                    Action3_div.style.display = "none";
+                    Action4_div.style.display = "none";
+                    FarmAll_input.value = '';
+                    Farm1_input.value = '';
+                    Farm2_input.value = '';
+                    Farm3_input.value = '';
+                    Farm4_input.value = '';
+                    Farm5_input.value = '';
+                    Farm6_input.value = '';
+                    Farm7_input.value = '';
+                    Farm8_input.value = '';
+                }); 
+            }
+        
+            setFarmsLevels.addEventListener('mousedown', function() {
+                this.querySelector('span').style.color = "white";
+            })
+        
+            document.querySelector("body").addEventListener("mouseup", function(){
+                for(let i = 0; i < document.getElementsByClassName("return_btn").length; i++){
+                    document.querySelectorAll('.return_btn > span')[i].style.color = "";
+                } 
+                setFarmsLevels.querySelector('span').style.color = "";
+                for (let i = 0; i < document.getElementsByClassName("Action").length; i++){
+                    document.getElementsByClassName("Action")[i].style.color = "#DBDBDB";
+
+                    }
+                upgrade_1.style.backgroundColor = "#9FFF91";
+                upgrade_2.style.backgroundColor = "#9FFF91";
+                upgrade_3.style.backgroundColor = "#9FFF91";
+                upgrade_4.style.backgroundColor = "#9FFF91";
+                upgrade_5.style.backgroundColor = "#9FFF91";
+                upgrade_6.style.backgroundColor = "#9FFF91";
+                upgrade_7.style.backgroundColor = "#9FFF91";
+                upgrade_8.style.backgroundColor = "#9FFF91";
+                sell_1.style.backgroundColor = "red";
+                sell_2.style.backgroundColor = "red";
+                sell_3.style.backgroundColor = "red";
+                sell_4.style.backgroundColor = "red";
+                sell_5.style.backgroundColor = "red";
+                sell_6.style.backgroundColor = "red";
+                sell_7.style.backgroundColor = "red";
+                sell_8.style.backgroundColor = "red";
+                })
+        
+            
+            function updateF1(){
+                    switch(Farm_1_lvl){
+                        case -1:
+                            Farm1_img.src = Chosen_l0;
+                            Farm1_lvl.innerHTML = "0";
+                            Farm_1_lvl++;
+
+                            upgrade_1.innerHTML = "Upgrade";
+                            Farm1_img.style.display = "block";
+                            Farm1_lvl.style.display = "block";
+                            return;
+
+                        case 0:
+                            Farm1_img.src = Chosen_l1;
+                            Farm1_lvl.innerHTML = "1";
+                            Farm_1_lvl++;
+                            return;
+
+                        case 1:
+                            Farm1_img.src = Chosen_l2;
+                            Farm1_lvl.innerHTML = "2";
+                            Farm_1_lvl++;
+                            return;
+
+                        case 2:
+                            Farm1_img.src = Chosen_l3;
+                            Farm1_lvl.innerHTML = "3";
+                            Farm_1_lvl++;
+                            return;
+
+                        case 3:
+                            Farm1_img.src = Chosen_l4;
+                            Farm1_lvl.innerHTML = "4";
+                            Farm_1_lvl++;
+                            return;
+
+                        case 4:
+                            Farm1_img.src = Chosen_l5;
+                            Farm1_lvl.innerHTML = "5";
+                            Farm_1_lvl++;
+                            upgrade_1.innerHTML = "Maxed";
+                            upgrade_1.style.cursor = "default";
+                            return;
+                    }
+                }
+            function sellF1(){
+                Farm_1_lvl = -1;  
+                upgrade_1.innerHTML = "Place";
+                upgrade_1.style.cursor = "pointer";
+                Farm1_img.style.display = "none";
+                Farm1_lvl.style.display = "none";
+                updateCPW();
+                updateBestValue();
+            }
+            upgrade_1.addEventListener('click', function() {
+                updateF1();
+                updateCPW();
+                updateBestValue();
+            }) 
+            upgrade_1.addEventListener('mousedown', function(){
+                if(Farm_1_lvl != 5){
+                    this.style.backgroundColor = "#D3FFCC";
+                }
+                else{
+                    this.style.backgroundColor = "#D9FF87";
+                }
+            })
+            sell_1.addEventListener('click', sellF1)
+            sell_1.addEventListener('mousedown', function(){
+                this.style.backgroundColor = "#b00000";
+            })
+            
+        
+        
+            function updateF2(){
+            switch(Farm_2_lvl){
+                case -1:
+                    Farm2_img.src = Chosen_l0;
+                    Farm2_lvl.innerHTML = "0";
+                    Farm_2_lvl++
+                    upgrade_2.innerHTML = "Upgrade";
+                    Farm2_img.style.display = "block";
+                    Farm2_lvl.style.display = "block";
+                    return;
+
+                case 0:
+                    Farm2_img.src = Chosen_l1;
+                    Farm2_lvl.innerHTML = "1";
+                    Farm_2_lvl++;
+                    return;
+
+                case 1:
+                    Farm2_img.src = Chosen_l2;
+                    Farm2_lvl.innerHTML = "2";
+                    Farm_2_lvl++;
+                    return;
+
+                case 2:
+                    Farm2_img.src = Chosen_l3;
+                    Farm2_lvl.innerHTML = "3";
+                    Farm_2_lvl++;
+                    return;
+
+                case 3:
+                    Farm2_img.src = Chosen_l4;
+                    Farm2_lvl.innerHTML = "4";
+                    Farm_2_lvl++;
+                    return;
+
+                case 4:
+                    Farm2_img.src = Chosen_l5;
+                    Farm2_lvl.innerHTML = "5";
+                    Farm_2_lvl++;
+                    upgrade_2.innerHTML = "Maxed";
+                    upgrade_2.style.cursor = "default";
+                    return;
+                }
+            }
+            function sellF2() {
+              Farm_2_lvl = -1;
+              upgrade_2.innerHTML = "Place";
+              upgrade_2.style.cursor = "pointer";
+              Farm2_img.style.display = "none";
+              Farm2_lvl.style.display = "none";
+              updateCPW();
+              updateBestValue();
+            }
+            upgrade_2.addEventListener('click', function() {
+                updateF2();
+                updateCPW();
+                updateBestValue();
+            });
+            upgrade_2.addEventListener('mousedown', function(){
+                if(Farm_2_lvl != 5){
+                    this.style.backgroundColor = "#D3FFCC";
+                }
+                else{
+                    this.style.backgroundColor = "#D9FF87";
+                }
+            })
+            sell_2.addEventListener('click', sellF2)
+            sell_2.addEventListener('mousedown', function(){
+                this.style.backgroundColor = "#b00000";
+            })
+        
+            function updateF3(){
+            switch(Farm_3_lvl){
+                case -1:
+                    Farm3_img.src = Chosen_l0;
+                    Farm3_lvl.innerHTML = "0";
+                    Farm_3_lvl++;
+                    upgrade_3.innerHTML = "Upgrade";
+                    Farm3_img.style.display = "block";
+                    Farm3_lvl.style.display = "block";
+                    return;
+
+                case 0:
+                    Farm3_img.src = Chosen_l1;
+                    Farm3_lvl.innerHTML = "1";
+                    Farm_3_lvl++;
+                    return;
+
+                case 1:
+                    Farm3_img.src = Chosen_l2;
+                    Farm3_lvl.innerHTML = "2";
+                    Farm_3_lvl++;
+                    return;
+
+                case 2:
+                    Farm3_img.src = Chosen_l3;
+                    Farm3_lvl.innerHTML = "3";
+                    Farm_3_lvl++;
+                    return;
+
+                case 3:
+                    Farm3_img.src = Chosen_l4;
+                    Farm3_lvl.innerHTML = "4";
+                    Farm_3_lvl++;
+                    return;
+
+                case 4:
+                    Farm3_img.src = Chosen_l5;
+                    Farm3_lvl.innerHTML = "5";
+                    Farm_3_lvl++;
+                    upgrade_3.innerHTML = "Maxed";
+                    upgrade_3.style.cursor = "default";
+                    return;
+                }
+            }
+            function sellF3() {
+              Farm_3_lvl = -1;
+              upgrade_3.innerHTML = "Place";
+              upgrade_3.style.cursor = "pointer";
+              Farm3_img.style.display = "none";
+              Farm3_lvl.style.display = "none";
+              updateCPW();
+              updateBestValue();
+            }
+            upgrade_3.addEventListener('click', function() {
+                updateF3();
+                updateCPW();
+                updateBestValue();
+            });
+            upgrade_3.addEventListener('mousedown', function(){
+                if(Farm_3_lvl != 5){
+                    this.style.backgroundColor = "#D3FFCC";
+                }
+                else{
+                    this.style.backgroundColor = "#D9FF87";
+                }
+            })
+            sell_3.addEventListener('click', sellF3)
+            sell_3.addEventListener('mousedown', function(){
+                this.style.backgroundColor = "#b00000";
+            })
+        
+            function updateF4(){
+                switch(Farm_4_lvl){
+                    case -1:
+                        Farm4_img.src = Chosen_l0;
+                        Farm4_lvl.innerHTML = "0";
+                        Farm_4_lvl++;
+
+                        upgrade_4.innerHTML = "Upgrade";
+                        Farm4_img.style.display = "block";
+                        Farm4_lvl.style.display = "block";
+                        return;
+
+                    case 0:
+                        Farm4_img.src = Chosen_l1;
+                        Farm4_lvl.innerHTML = "1";
+                        Farm_4_lvl++;
+                        return;
+
+                    case 1:
+                        Farm4_img.src = Chosen_l2;
+                        Farm4_lvl.innerHTML = "2";
+                        Farm_4_lvl++;
+                        return;
+
+                    case 2:
+                        Farm4_img.src = Chosen_l3;
+                        Farm4_lvl.innerHTML = "3";
+                        Farm_4_lvl++;
+                        return;
+
+                    case 3:
+                        Farm4_img.src = Chosen_l4;
+                        Farm4_lvl.innerHTML = "4";
+                        Farm_4_lvl++;
+                        return;
+
+                    case 4:
+                        Farm4_img.src = Chosen_l5;
+                        Farm4_lvl.innerHTML = "5";
+                        Farm_4_lvl++;
+                        upgrade_4.innerHTML = "Maxed";
+                        upgrade_4.style.cursor = "default";
+                        return;
+                    }
+                }
+            function sellF4() {
+              Farm_4_lvl = -1;
+              upgrade_4.innerHTML = "Place";
+              upgrade_4.style.cursor = "pointer";
+              Farm4_img.style.display = "none";
+              Farm4_lvl.style.display = "none";
+              updateCPW();
+                updateBestValue();
+            }
+            upgrade_4.addEventListener('click', function() {
+                updateF4();
+                updateCPW();
+                updateBestValue();
+                });
+            upgrade_4.addEventListener('mousedown', function(){
+                if(Farm_4_lvl != 5){
+                    this.style.backgroundColor = "#D3FFCC";
+                }
+                else{
+                    this.style.backgroundColor = "#D9FF87";
+                }
+            })
+            sell_4.addEventListener('click', sellF4)
+            sell_4.addEventListener('mousedown', function(){
+                this.style.backgroundColor = "#b00000";
+            })
+        
+            function updateF5(){
+                switch(Farm_5_lvl){
+                    case -1:
+                        Farm5_img.src = Chosen_l0;
+                        Farm5_lvl.innerHTML = "0";
+                        Farm_5_lvl++;
+
+                        upgrade_5.innerHTML = "Upgrade";
+                        Farm5_img.style.display = "block";
+                        Farm5_lvl.style.display = "block";
+                        return;
+
+                    case 0:
+                        Farm5_img.src = Chosen_l1;
+                        Farm5_lvl.innerHTML = "1";
+                        Farm_5_lvl++;
+                        return;
+
+                    case 1:
+                        Farm5_img.src = Chosen_l2;
+                        Farm5_lvl.innerHTML = "2";
+                        Farm_5_lvl++;
+                        return;
+
+                    case 2:
+                        Farm5_img.src = Chosen_l3;
+                        Farm5_lvl.innerHTML = "3";
+                        Farm_5_lvl++;
+                        return;
+
+                    case 3:
+                        Farm5_img.src = Chosen_l4;
+                        Farm5_lvl.innerHTML = "4";
+                        Farm_5_lvl++;
+                        return;
+
+                    case 4:
+                        Farm5_img.src = Chosen_l5;
+                        Farm5_lvl.innerHTML = "5";
+                        Farm_5_lvl++;
+                        upgrade_5.innerHTML = "Maxed";
+                        upgrade_5.style.cursor = "default";
+                        return;
+                }
+            }
+            function sellF5() {
+              Farm_5_lvl = -1;
+              upgrade_5.innerHTML = "Place";
+              upgrade_5.style.cursor = "pointer";
+              Farm5_img.style.display = "none";
+              Farm5_lvl.style.display = "none";
+              updateCPW();
+                updateBestValue();
+            }
+            upgrade_5.addEventListener('click', function() {
+                updateF5();
+                updateCPW();
+                updateBestValue();
+            });
+            upgrade_5.addEventListener('mousedown', function(){
+                if(Farm_5_lvl != 5){
+                    this.style.backgroundColor = "#D3FFCC";
+                }
+                else{
+                    this.style.backgroundColor = "#D9FF87";
+                }
+            })
+            sell_5.addEventListener('click', sellF5);
+            sell_5.addEventListener('mousedown', function(){
+                this.style.backgroundColor = "#b00000";
+            })
+        
+            function updateF6(){
+                switch(Farm_6_lvl){
+                    case -1:
+                        Farm6_img.src = Chosen_l0;
+                        Farm6_lvl.innerHTML = "0";
+                        Farm_6_lvl++;
+
+                        upgrade_6.innerHTML = "Upgrade";
+                        Farm6_img.style.display = "block";
+                        Farm6_lvl.style.display = "block";
+                        return;
+
+                    case 0:
+                        Farm6_img.src = Chosen_l1;
+                        Farm6_lvl.innerHTML = "1";
+                        Farm_6_lvl++;
+                        return;
+
+                    case 1:
+                        Farm6_img.src = Chosen_l2;
+                        Farm6_lvl.innerHTML = "2";
+                        Farm_6_lvl++;
+                        return;
+
+                    case 2:
+                        Farm6_img.src = Chosen_l3;
+                        Farm6_lvl.innerHTML = "3";
+                        Farm_6_lvl++;
+                        return;
+
+                    case 3:
+                        Farm6_img.src = Chosen_l4;
+                        Farm6_lvl.innerHTML = "4";
+                        Farm_6_lvl++;
+                        return;
+
+                    case 4:
+                        Farm6_img.src = Chosen_l5;
+                        Farm6_lvl.innerHTML = "5";
+                        Farm_6_lvl++;
+                        upgrade_6.innerHTML = "Maxed";
+                        upgrade_6.style.cursor = "default";
+                        return;
+                }
+            }
+            function sellF6() {
+              Farm_6_lvl = -1;
+              upgrade_6.innerHTML = "Place";
+              upgrade_6.style.cursor = "pointer";
+              Farm6_img.style.display = "none";
+              Farm6_lvl.style.display = "none";
+              updateCPW();
+                updateBestValue();
+            }
+            upgrade_6.addEventListener('click', function() {
+                updateF6();
+                updateCPW();
+                updateBestValue();
+            });
+            upgrade_6.addEventListener('mousedown', function(){
+                if(Farm_6_lvl != 5){
+                    this.style.backgroundColor = "#D3FFCC";
+                }
+                else{
+                    this.style.backgroundColor = "#D9FF87";
+                }
+            })
+            sell_6.addEventListener('click', sellF6)
+            sell_6.addEventListener('mousedown', function(){
+                this.style.backgroundColor = "#b00000";
+            })
+        
+            function updateF7(){
+                switch(Farm_7_lvl){
+                    case -1:
+                        Farm7_img.src = Chosen_l0;
+                        Farm7_lvl.innerHTML = "0";
+                        Farm_7_lvl++;
+
+                        upgrade_7.innerHTML = "Upgrade";
+                        Farm7_img.style.display = "block";
+                        Farm7_lvl.style.display = "block";
+                        return;
+
+                    case 0:
+                        Farm7_img.src = Chosen_l1;
+                        Farm7_lvl.innerHTML = "1";
+                        Farm_7_lvl++;
+                        return;
+
+                    case 1:
+                        Farm7_img.src = Chosen_l2;
+                        Farm7_lvl.innerHTML = "2";
+                        Farm_7_lvl++;
+                        return;
+
+                    case 2:
+                        Farm7_img.src = Chosen_l3;
+                        Farm7_lvl.innerHTML = "3";
+                        Farm_7_lvl++;
+                        return;
+
+                    case 3:
+                        Farm7_img.src = Chosen_l4;
+                        Farm7_lvl.innerHTML = "4";
+                        Farm_7_lvl++;
+                        return;
+
+                    case 4:
+                        Farm7_img.src = Chosen_l5;
+                        Farm7_lvl.innerHTML = "5";
+                        Farm_7_lvl++;
+                        upgrade_7.innerHTML = "Maxed";
+                        upgrade_7.style.cursor = "default";
+                        return;
+                }
+            }
+            function sellF7() {
+              Farm_7_lvl = -1;
+              upgrade_7.innerHTML = "Place";
+              upgrade_7.style.cursor = "pointer";
+              Farm7_img.style.display = "none";
+              Farm7_lvl.style.display = "none";
+              updateCPW();
+                updateBestValue();
+            }
+            upgrade_7.addEventListener('click', function() {
+                updateF7();
+                updateCPW();
+                updateBestValue();
+            });
+            upgrade_7.addEventListener('mousedown', function(){
+                if(Farm_7_lvl != 5){
+                    this.style.backgroundColor = "#D3FFCC";
+                }
+                else{
+                    this.style.backgroundColor = "#D9FF87";
+                }
+            })
+            sell_7.addEventListener('click', sellF7)
+            sell_7.addEventListener('mousedown', function(){
+                this.style.backgroundColor = "#b00000";
+            })
+        
+            function updateF8(){
+                switch(Farm_8_lvl){
+                    case -1:
+                        Farm8_img.src = Chosen_l0;
+                        Farm8_lvl.innerHTML = "0";
+                        Farm_8_lvl++;
+
+                        upgrade_8.innerHTML = "Upgrade";
+                        Farm8_img.style.display = "block";
+                        Farm8_lvl.style.display = "block";
+                        return;
+
+                    case 0:
+                        Farm8_img.src = Chosen_l1;
+                        Farm8_lvl.innerHTML = "1";
+                        Farm_8_lvl++;
+                        return;
+
+                    case 1:
+                        Farm8_img.src = Chosen_l2;
+                        Farm8_lvl.innerHTML = "2";
+                        Farm_8_lvl++;
+                        return;
+
+                    case 2:
+                        Farm8_img.src = Chosen_l3;
+                        Farm8_lvl.innerHTML = "3";
+                        Farm_8_lvl++;
+                        return;
+
+                    case 3:
+                        Farm8_img.src = Chosen_l4;
+                        Farm8_lvl.innerHTML = "4";
+                        Farm_8_lvl++;
+                        return;
+
+                    case 4:
+                        Farm8_img.src = Chosen_l5;
+                        Farm8_lvl.innerHTML = "5";
+                        Farm_8_lvl++;
+                        upgrade_8.innerHTML = "Maxed";
+                        upgrade_8.style.cursor = "default";
+                        return;
+                }
+            }
+            function sellF8() {
+              Farm_8_lvl = -1;
+              upgrade_8.innerHTML = "Place";
+              upgrade_8.style.cursor = "pointer";
+              Farm8_img.style.display = "none";
+              Farm8_lvl.style.display = "none";
+              updateCPW();
+                updateBestValue();
+            }
+            upgrade_8.addEventListener('click', function() {
+                updateF8();
+                updateCPW();
+                updateBestValue();
+            });
+            upgrade_8.addEventListener('mousedown', function(){
+                if(Farm_8_lvl != 5){
+                    this.style.backgroundColor = "#D3FFCC";
+                }
+                else{
+                    this.style.backgroundColor = "#D9FF87";
+                }
+            })
+            sell_8.addEventListener('click', sellF8)
+            sell_8.addEventListener('mousedown', function(){
+                this.style.backgroundColor = "#b00000";
+            })
+            
+        
+        
+        
+            let Action1_click = false;
+            Action_1.addEventListener('click', function() {
+                if(Action1_click == true){
+                    Action_1.innerHTML = "Sell all Farms";
+                    Action1_click = false;
+                    
+                    sellF1();
+                    sellF2();
+                    sellF3();
+                    sellF4();
+                    sellF5();
+                    sellF6();
+                    sellF7();
+                    sellF8();
+                }
+                else{
+                    Action_1.innerHTML = "Confirm";
+                    Action1_click = true;
+                    setTimeout(function(){
+                        Action1_click = false
+                        Action_1.innerHTML = "Sell all Farms";
+                    },1000);
+                }
+            })
+            
+        
+        
+            Action_2.addEventListener('click', function() {
+                Action_main_div.style.display = "none";
+                Action2_div.style.display = "flex";
+                updateFarmInputSize();
+            })
+            FarmAll_input.addEventListener('input', function(){
+                if(!isNaN(FarmAll_input.value) && FarmAll_input.value % 1 == 0 && FarmAll_input.value >=0 && FarmAll_input.value <=5){
+                    Farm1_input.value = FarmAll_input.value;
+                    Farm2_input.value = FarmAll_input.value;
+                    Farm3_input.value = FarmAll_input.value;
+                    Farm4_input.value = FarmAll_input.value;
+                    Farm5_input.value = FarmAll_input.value;
+                    Farm6_input.value = FarmAll_input.value;
+                    Farm7_input.value = FarmAll_input.value;
+                    Farm8_input.value = FarmAll_input.value;
+                }
+            })
+            setFarmsLevels.addEventListener('click', function(){
+                if (!isNaN(Farm1_input.value) && Farm1_input.value % 1 == 0 && Farm1_input.value >= 0 && Farm1_input.value <= 5) {
+                    if(Farm1_input.value == ""){
+                        sellF1();
+                    }
+                    else{
+                        Farm_1_lvl = -1;
+                        updateF1()
+                        Farm_1_lvl = Farm1_input.value - 1;
+                        updateF1();
+                    }
+                }
+                if (!isNaN(Farm2_input.value) && Farm2_input.value % 1 == 0 && Farm2_input.value >= 0 && Farm2_input.value <= 5) {
+                    if(Farm2_input.value == ""){
+                        sellF2();
+                    }
+                    else{
+                      Farm_2_lvl = -1;
+                      updateF2();
+                      Farm_2_lvl = Farm2_input.value - 1;
+                      updateF2();
+                    }
+                }
+                if (!isNaN(Farm3_input.value) && Farm3_input.value % 1 == 0 && Farm3_input.value >= 0 && Farm3_input.value <= 5) {
+                    if(Farm3_input.value == ""){
+                        sellF3();
+                    }
+                    else{
+                      Farm_3_lvl = -1;
+                      updateF3();
+                      Farm_3_lvl = Farm3_input.value - 1;
+                      updateF3();
+                    }
+                }
+                if (!isNaN(Farm4_input.value) && Farm4_input.value % 1 == 0 && Farm4_input.value >= 0 && Farm4_input.value <= 5) {
+                    if(Farm4_input.value == ""){
+                        sellF4();
+                    }
+                    else{
+                      Farm_4_lvl = -1;
+                      updateF4();
+                      Farm_4_lvl = Farm4_input.value - 1;
+                      updateF4();
+                    }
+                }
+                if (!isNaN(Farm5_input.value) && Farm5_input.value % 1 == 0 && Farm5_input.value >= 0 && Farm5_input.value <= 5) {
+                    if(Farm5_input.value == ""){
+                        sellF5();
+                    }
+                    else{
+                      console.log(Farm5_input.value);
+                      Farm_5_lvl = -1;
+                      updateF5();
+                      Farm_5_lvl = Farm5_input.value - 1;
+                      updateF5();
+                    }
+                }
+                if (!isNaN(Farm6_input.value) && Farm6_input.value % 1 == 0 && Farm6_input.value >= 0 && Farm6_input.value <= 5) {
+                    if(Farm6_input.value == ""){
+                        sellF6();
+                    }
+                    else{
+                      console.log(Farm6_input.value);
+                      Farm_6_lvl = -1;
+                      updateF6();
+                      Farm_6_lvl = Farm6_input.value - 1;
+                      updateF6();
+                    }
+                }
+                if (!isNaN(Farm7_input.value) && Farm7_input.value % 1 == 0 && Farm7_input.value >= 0 && Farm7_input.value <= 5) {
+                    if(Farm7_input.value == ""){
+                        sellF7();
+                    }
+                    else{
+                      console.log(Farm7_input.value);
+                      Farm_7_lvl = -1;
+                      updateF7();
+                      Farm_7_lvl = Farm7_input.value - 1;
+                      updateF7();
+                    }
+                }
+                if (!isNaN(Farm8_input.value) && Farm8_input.value % 1 == 0 && Farm8_input.value >= 0 && Farm8_input.value <= 5) {
+                    if(Farm8_input.value == ""){
+                        sellF8();
+                    }
+                    else{
+                      console.log(Farm8_input.value);
+                      Farm_8_lvl = -1;
+                      updateF8();
+                      Farm_8_lvl = Farm8_input.value - 1;
+                      updateF8();
+                    }
+                }
+                updateCPW();
+                updateBestValue();
+            })
+        
+        
+            
+            Action_3.addEventListener('click', function(){
+                Action_main_div.style.display = "none";
+                Action3_div.style.display = "flex";
+            })
+            Action3_1.style.backgroundColor = "gray";
+            for (let i = 0; i < document.getElementsByClassName("Action3").length; i++){
+                document.getElementsByClassName("Action3")[i].addEventListener('click', function(){
+                    for (let j = 0; j < document.getElementsByClassName("Action3").length; j++){
+                        document.getElementsByClassName("Action3")[j].style.backgroundColor = "";
+                    }
+                    this.style.backgroundColor = "gray";
+                })
+            }
+            function updateAllFarms(){
+                if(Farm_1_lvl != -1){Farm_1_lvl -= 1; updateF1();}
+                if(Farm_2_lvl != -1){Farm_2_lvl -= 1; updateF2();}
+                if(Farm_3_lvl != -1){Farm_3_lvl -= 1; updateF3();}
+                if(Farm_4_lvl != -1){Farm_4_lvl -= 1; updateF4();}
+                if(Farm_5_lvl != -1){Farm_5_lvl -= 1; updateF5();}
+                if(Farm_6_lvl != -1){Farm_6_lvl -= 1; updateF6();}
+                if(Farm_7_lvl != -1){Farm_7_lvl -= 1; updateF7();}
+                if(Farm_8_lvl != -1){Farm_8_lvl -= 1; updateF8();}
+            }
+            Action3_1.addEventListener('click', function(){
+                Chosen_l0 = l0_Default_SRC;
+                Chosen_l1 = l1_Default_SRC;
+                Chosen_l2 = l2_Default_SRC;
+                Chosen_l3 = l3_Default_SRC;
+                Chosen_l4 = l4_Default_SRC;
+                Chosen_l5 = l5_Default_SRC;
+                updateAllFarms();
+            })
+            Action3_2.addEventListener('click', function(){
+                Chosen_l0 = l0_Arcade_SRC;
+                Chosen_l1 = l1_Arcade_SRC;
+                Chosen_l2 = l2_Arcade_SRC;
+                Chosen_l3 = l3_Arcade_SRC;
+                Chosen_l4 = l4_Arcade_SRC;
+                Chosen_l5 = l5_Arcade_SRC;
+                updateAllFarms();
+            })
+            Action3_3.addEventListener('click', function(){
+                Chosen_l0 = l0_Xmax_SRC;
+                Chosen_l1 = l1_Xmax_SRC;
+                Chosen_l2 = l2_Xmax_SRC;
+                Chosen_l3 = l3_Xmax_SRC;
+                Chosen_l4 = l4_Xmax_SRC;
+                Chosen_l5 = l5_Xmax_SRC;
+                updateAllFarms();
+            })
+            Action3_4.addEventListener('click', function(){
+                Chosen_l0 = l0_Tycoon_SRC;
+                Chosen_l1 = l1_Tycoon_SRC;
+                Chosen_l2 = l2_Tycoon_SRC;
+                Chosen_l3 = l3_Tycoon_SRC;
+                Chosen_l4 = l4_Tycoon_SRC;
+                Chosen_l5 = l5_Tycoon_SRC;
+                updateAllFarms();
+            })
+            Action3_5.addEventListener('click', function(){
+                Chosen_l0 = l0_Graveyard_SRC;
+                Chosen_l1 = l1_Graveyard_SRC;
+                Chosen_l2 = l2_Graveyard_SRC;
+                Chosen_l3 = l3_Graveyard_SRC;
+                Chosen_l4 = l4_Graveyard_SRC;
+                Chosen_l5 = l5_Graveyard_SRC;
+                updateAllFarms();
+            })
+            Action3_6.addEventListener('click', function(){
+                Chosen_l0 = l0_Present_SRC;
+                Chosen_l1 = l1_Present_SRC;
+                Chosen_l2 = l2_Present_SRC;
+                Chosen_l3 = l3_Present_SRC;
+                Chosen_l4 = l4_Present_SRC;
+                Chosen_l5 = l5_Present_SRC;
+                updateAllFarms();
+            })
+            Action3_7.addEventListener('click', function(){
+                Chosen_l0 = l0_Ducky_SRC;
+                Chosen_l1 = l1_Ducky_SRC;
+                Chosen_l2 = l2_Ducky_SRC;
+                Chosen_l3 = l3_Ducky_SRC;
+                Chosen_l4 = l4_Ducky_SRC;
+                Chosen_l5 = l5_Ducky_SRC;
+                updateAllFarms();
+            })
+            Action3_8.addEventListener('click', function(){
+                Chosen_l0 = l0_Crypto_SRC;
+                Chosen_l1 = l1_Crypto_SRC;
+                Chosen_l2 = l2_Crypto_SRC;
+                Chosen_l3 = l3_Crypto_SRC;
+                Chosen_l4 = l4_Crypto_SRC;
+                Chosen_l5 = l5_Crypto_SRC;
+                updateAllFarms();
+            })
+        
+        
+        
+            Action_4.addEventListener('click', function(){
+                Action_main_div.style.display = "none";
+                Action4_div.style.display = "flex";
+            })
+        
+    </script>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
